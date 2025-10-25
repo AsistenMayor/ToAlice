@@ -1,104 +1,206 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Untuk Alice — Mohon Maaf</title>
-<style>
-:root{--bg:#ffeef4;--accent:#ff6fa3;--soft:#ffd9e8}
-*{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial}
-body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:#222;display:flex;align-items:center;justify-content:center;min-height:100vh}
-.card{width:920px;max-width:95vw;background:rgba(255,255,255,0.7);border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,0.08);position:relative;overflow:hidden}
-header{display:flex;gap:16px;align-items:center}
-.logo{width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,#fff0,#fff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:20px}
-h1{margin:0;font-size:20px}
-p.lead{color:#555;margin-top:8px}
-.scene{min-height:320px;display:none;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:24px}
-.scene.active{display:flex}
-.btn{background:var(--accent);color:white;padding:12px 18px;border-radius:12px;border:0;font-weight:600;cursor:pointer;box-shadow:0 6px 16px rgba(255,111,163,0.24)}
-.btn.ghost{background:transparent;color:var(--accent);border:2px solid rgba(255,111,163,0.18)}
-.type{font-size:28px;font-weight:700;color:#222;margin:12px 0}
-.small{font-size:16px;color:#444}
-.final{background:linear-gradient(90deg,#fff,#fff0);padding:18px;border-radius:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.6)}
-@media(max-width:600px){.type{font-size:20px}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Untuk Alice 💖</title>
+  <style>
+    :root {
+      --bg: #fff0f5;
+      --accent: #ff6fa3;
+      --text: #333;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      background: linear-gradient(180deg, var(--bg), #fff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .heart {
+      position: absolute;
+      color: rgba(255, 111, 163, 0.2);
+      font-size: 24px;
+      animation: float 6s linear infinite;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(0.5) rotate(0deg);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    .card {
+      width: 900px;
+      max-width: 92vw;
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      padding: 36px;
+      text-align: center;
+      position: relative;
+      z-index: 5;
+    }
+    .logo {
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    h1 {
+      font-size: 22px;
+      margin-top: 10px;
+    }
+    p.lead {
+      color: #555;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    .scene {
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .scene.active {
+      display: flex;
+    }
+    .type {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .small {
+      font-size: 16px;
+      color: #444;
+      line-height: 1.5;
+    }
+    .btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.2s;
+      box-shadow: 0 4px 10px rgba(255, 111, 163, 0.3);
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    .btn.ghost {
+      background: transparent;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+    }
+    .bird {
+      position: fixed;
+      top: 50%;
+      left: -100px;
+      font-size: 30px;
+      color: #ff9ebc;
+      opacity: 0.8;
+      transform: rotate(20deg);
+      animation: fly 5s linear forwards;
+    }
+    @keyframes fly {
+      0% {
+        transform: translate(-100px, 0) rotate(20deg);
+      }
+      50% {
+        transform: translate(50vw, -100px) rotate(0deg);
+      }
+      100% {
+        transform: translate(120vw, -200px) rotate(-10deg);
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 <body>
-<div class="card" role="main" aria-live="polite">
-<header>
-  <div class="logo">AL</div>
-  <div>
+
+  <script>
+    for (let i = 0; i < 20; i++) {
+      const h = document.createElement('div');
+      h.className = 'heart';
+      h.style.left = Math.random() * 100 + 'vw';
+      h.style.animationDuration = (4 + Math.random() * 4) + 's';
+      h.style.fontSize = (16 + Math.random() * 24) + 'px';
+      h.innerHTML = '💖';
+      document.body.appendChild(h);
+    }
+  </script>
+
+  <div class="card">
+    <div class="logo">AL</div>
     <h1>Untuk Alice</h1>
     <p class="lead">Sebuah percobaan kecil untuk bikin kamu senyum lagi — versi bego lucu yang ngarep dimaafin.</p>
-  </div>
-</header>
 
-<!-- Scene 1 -->
-<section id="scene1" class="scene active">
-  <div class="type">Hai Alice...</div>
-  <div class="small">
-    Aku tahu akhir-akhir ini kamu pasti kesal sama aku, mungkin terlihat seperti laki-laki yang nggak bisa jaga sikap.  
-    Tapi jujur, aku cuma manusia yang sedang belajar untuk jadi lebih baik — untuk kamu.
-  </div>
+    <div id="scene1" class="scene active">
+      <div class="type">Hai Alice...</div>
+      <div class="small">
+        Aku tahu akhir-akhir ini kamu pasti kesal sama aku, mungkin terlihat seperti laki-laki yang nggak bisa jaga sikap.  
+        Tapi jujur, aku cuma manusia yang sedang belajar untuk jadi lebih baik — untuk kamu.
+      </div>
+      <button class="btn" onclick="playMusic()">🎵 Putar musik</button>
+      <button class="btn" onclick="nextScene('scene2')">Lanjut ah 😌</button>
+    </div>
 
-  <!-- Tombol Musik -->
-  <div style="margin-top:25px;">
-    <button onclick="playMusic()" class="btn">🎵 Putar musik</button>
-  </div>
+    <div id="scene2" class="scene">
+      <div class="type">Mungkin kamu kecewa...</div>
+      <div class="small">
+        Dan aku ngerti banget kalau kepercayaan itu nggak bisa diminta begitu aja.  
+        Tapi aku ingin pelan-pelan nunjukin, kalau aku nggak seburuk itu.  
+        Aku mohon, berikan aku kesempatan terakhir untuk membuktikan kalau aku tidak seburuk itu :( 
+      </div>
+      <button class="btn" onclick="nextScene('scene3')">Terus 💗</button>
+    </div>
 
-  <!-- Tombol Lanjut -->
-  <div style="margin-top:22px">
-    <button class="btn" data-next="scene2">Lanjut ah 😌</button>
-  </div>
-</section>
-
-<!-- Scene 2 -->
-<section id="scene2" class="scene">
-  <div class="type">Mungkin kamu kecewa...</div>
-  <div class="small">
-    Dan aku ngerti banget kalau kepercayaan itu nggak bisa diminta begitu aja.  
-    Tapi aku ingin pelan-pelan nunjukin, kalau aku nggak seburuk itu.  
-    Aku mohon, berikan aku kesempatan terakhir untuk membuktikan kalau aku tidak seburuk itu :( 
-  </div>
-  <div style="margin-top:22px">
-    <button class="btn" data-next="scene3">Terus 💗</button>
-  </div>
-</section>
-
-<!-- Scene 3 (Final) -->
-<section id="scene3" class="scene">
-  <div class="final">
-    <div class="type">Terima kasih, Alice 💖</div>
-    <div class="small" style="margin-top:12px">
-      Kamu nggak tahu seberapa besar artinya buatku — dikasih kesempatan untuk dipercaya lagi.  
-      Lagu ini, halaman ini, semuanya cuma cara kecil buat bilang:<br><br>
-      “Aku masih di sini menunggu di kesempatan emas dari kamu.” 💫<br><br>
-      Setelah lihat ini kamu nggak usah chat aku ya,<br>
-      kamu chat saja saat kamu sudah buka pintu kesempatan itu untukku.<br><br>
-      Aku pasti akan terus menunggu notifmu sampai kapanpun 🫶
+    <div id="scene3" class="scene">
+      <div class="type">Terima kasih, Alice 💖</div>
+      <div class="small">
+        Kamu nggak tahu seberapa besar artinya buatku — dikasih kesempatan untuk dipercaya lagi.  
+        Lagu ini, halaman ini, semuanya cuma cara kecil buat bilang:<br><br>
+        “Aku masih di sini menunggu di kesempatan emas dari kamu.” 💫<br><br>
+        Setelah lihat ini kamu nggak usah chat aku ya,<br>
+        kamu chat saja saat kamu sudah buka pintu kesempatan itu untukku.<br><br>
+        Aku pasti akan terus menunggu notifmu sampai kapanpun 🫶
+      </div>
     </div>
   </div>
-</section>
 
-<!-- Pemutar Musik -->
-<audio id="song" src="https://dl.dropboxusercontent.com/scl/fi/1ufk66dr0s95e8zmm5k4r/kelly.mp3?rlkey=4z0hvpxqqpj7lg2g1b0sac0g8&dl=0"></audio>
+  <audio id="song" preload="auto" loop>
+    <source src="https://audio.com/zoltan-seprus/audio/kelly-clarkson-because-of-you-instrumental-cover-1" type="audio/mpeg">
+  </audio>
 
-</div>
+  <script>
+    function playMusic() {
+      const audio = document.getElementById('song');
+      audio.currentTime = 0;
+      audio.play().catch(() => alert('Klik ulang ya, browser minta izin audio 😅'));
+    }
 
-<script>
-document.querySelectorAll('[data-next]').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    const next = btn.getAttribute('data-next');
-    document.querySelectorAll('.scene').forEach(s=>s.classList.remove('active'));
-    document.getElementById(next).classList.add('active');
-  });
-});
-
-function playMusic(){
-  const audio=document.getElementById('song');
-  audio.currentTime=0;
-  audio.play();
-}
-</script>
+    function nextScene(id) {
+      for (let i = 0; i < 5; i++) {
+        const b = document.createElement('div');
+        b.className = 'bird';
+        b.innerHTML = '🐦';
+        b.style.top = (Math.random() * 60 + 20) + 'vh';
+        document.body.appendChild(b);
+        setTimeout(() => b.remove(), 5000);
+      }
+      document.querySelectorAll('.scene').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 </body>
 </html>
